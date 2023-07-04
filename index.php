@@ -1,5 +1,5 @@
 <?php
-
+    // ARRAY DEGLI HOTEL
     $hotels = [
 
         [
@@ -57,6 +57,7 @@
     <div class="container py-5">
         <div class="row">
             <div class="col">
+                <!-- TABELLA -->
                 <table class="table">
                     <thead>
                         <tr>
@@ -68,13 +69,16 @@
                         </tr>
                     </thead>
                     <tbody>
+                            <!-- LOOP CHE SCORRE L'INTERO ARRY ASSOCIATIVO -->
                         <?php foreach($hotels as $hotel){
+                            // CONTROLLO SE PARKING SIA TRUE O FALSE E GLI ASSOCIO UN' ICONA
                                 if($hotel["parking"]) {
                                     $hotel['parking'] = '<i class="fa-solid fa-check" style="color: #3fd10a;"></i>';
                                 } else {
                                     $hotel['parking'] = '<i class="fa-solid fa-xmark" style="color: red;"></i>';
                                 }
                         ?>
+                                <!-- STAMPO I VALORI DI OGNI CHIAVE -->
                             <tr>
                                 <td><?php echo $hotel['name'] ?></td>
                                 <td><?php echo $hotel['description'] ?></td>
