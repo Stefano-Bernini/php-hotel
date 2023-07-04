@@ -74,8 +74,15 @@
                                 } else {
                                     $hotel['parking'] = '<i class="fa-solid fa-xmark" style="color: red;"></i>';
                                 }
-                        }
                         ?>
+                            <tr>
+                                <td><?php echo $hotel['name'] ?></td>
+                                <td><?php echo $hotel['description'] ?></td>
+                                <td><?php echo $hotel['parking'] ?></td>
+                                <td><?php echo $hotel['vote'] ?></td>
+                                <td><?php echo $hotel['distance_to_center'].' km' ?></td>
+                            </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>
